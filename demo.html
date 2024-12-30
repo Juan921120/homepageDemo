@@ -36,19 +36,21 @@
         }
 
         .grid-container {
-            display: grid;
-            grid-template-columns: 190px 190px;  /* 设置两列，宽度固定为 200px */
-            grid-auto-rows: auto;  /* 行的高度自适应 */
-            gap: 10px;  /* 设置列和行之间的间距 */
-            padding: 10px;  /* 容器内边距 */
+            margin: 0 auto;
+            width: 90vw;
+           column-count: 2;
+           column-gap: 10px;
         }
 
         .grid-item {
             background-color: lightblue;
-            border: 2px solid #000;
+            border: 1px solid red;
             padding: 20px;
             text-align: center;
             box-sizing: border-box;
+        }
+        .grid-item img{
+            width: 100%;
         }
     </style>
 </head>
@@ -64,11 +66,13 @@
     </div>
 
     <div class="grid-container">
+        
         <div class="grid-item"><img src="img/1.jpg"></div>
-        <div class="grid-item"><img src="2.png"></div>
-        <div class="grid-item"><img src="3.png"></div>
-        <div class="grid-item"><img src="4.png"></div>
-        <div class="grid-item"><img src="5.png"></div>
+        <div class="grid-item"><img src="img/3.jpg"></div>
+        <div class="grid-item"><img src="img/2.jpg"></div>
+        
+        <div class="grid-item"><img src="img/4.jpg"></div>
+        <div class="grid-item"><img src="img/5.png"></div>
     </div>
 </body>
 
