@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .scroll-container {
+            display: flex;
+            justify-content: space-around;
+            overflow-x: auto;
+            /* 启用水平滚动 */
+            white-space: nowrap;
+            /* 防止换行 */
+            width: 100vw;
+            background-color: aqua;
+
+        }
+
+        .scroll-item {
+            text-align: center;
+            border: 1px solid red;
+            min-width: 80px
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+            /* Chrome 和 Safari 隐藏滚动条 */
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 190px 190px;  /* 设置两列，宽度固定为 200px */
+            grid-auto-rows: auto;  /* 行的高度自适应 */
+            gap: 10px;  /* 设置列和行之间的间距 */
+            padding: 10px;  /* 容器内边距 */
+        }
+
+        .grid-item {
+            background-color: lightblue;
+            border: 2px solid #000;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scroll-container">
+        <div class="scroll-item">文字1</div>
+        <div class="scroll-item">文字2</div>
+        <div class="scroll-item">文字3</div>
+        <div class="scroll-item">文字4</div>
+        <div class="scroll-item">文字5</div>
+        <div class="scroll-item">文字6</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item"><img src="img/1.jpg"></div>
+        <div class="grid-item"><img src="2.png"></div>
+        <div class="grid-item"><img src="3.png"></div>
+        <div class="grid-item"><img src="4.png"></div>
+        <div class="grid-item"><img src="5.png"></div>
+    </div>
+</body>
+
+</html>
